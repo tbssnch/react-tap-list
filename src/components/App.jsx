@@ -3,6 +3,7 @@ import Header from './Header';
 import KegList from './KegList';
 import AddKeg from './AddKeg';
 import EditKeg from './EditKeg';
+import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
 

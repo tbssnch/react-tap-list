@@ -47,7 +47,7 @@ function KegList(){
             key={index}/>
         )}
       </div>
-  </div>
+    </div>
   );
 }
 
