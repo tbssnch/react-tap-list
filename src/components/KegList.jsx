@@ -5,8 +5,8 @@ var masterKegList = [
   {
     name: 'IPA',
     brewery: 'Brewery',
-    price: '$5'
-    abv: '7.5%'
+    price: '$5',
+    abv: '7.5%',
     ibu: '90'
   }
 
@@ -15,7 +15,7 @@ var masterKegList = [
 function KegList(){
   return (
     <div>
-
+      <p>KegList works!</p>
     </div>
   );
 }

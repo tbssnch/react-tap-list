@@ -1,9 +1,11 @@
 import React from 'react';
 
-function EditKeg() {
+function AddKeg() {
   return (
-
+    <div>
+      <p>AddKeg works!</p>
+    </div>
   );
 }
 
-export default EditKeg;
+export default AddKeg;
