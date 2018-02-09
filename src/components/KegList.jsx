@@ -13,38 +13,41 @@ var masterKegList = [
     name: 'C-Note',
     brewery: 'Lompoc Brewing',
     price: '$5',
-    abv: '6.9%',
-    ibu: '100'
+    abv: '6.9% ABV',
+    ibu: '100 IBU'
   },
   {
     name: 'Born & Raised',
     brewery: 'No-Li Brewhouse',
     price: '$5',
-    abv: '7%',
-    ibu: '85'
+    abv: '7% ABV',
+    ibu: '85 IBU'
   },
   {
     name: 'Breakside IPA',
     brewery: 'Breakside Brewery',
     price: '$5',
-    abv: '6.2%',
-    ibu: '70'
+    abv: '6.2% ABV',
+    ibu: '70 IBU'
   }
 
 ];
 
 function KegList(){
   return (
-    <div>
-      {masterKegList.map((keg, index) =>
-        <Keg name={keg.name}
-          brewery={keg.brewery}
-          price={keg.price}
-          abv={keg.abv}
-          ibu={keg.ibu}
-          key={index}/>
-      )}
-    </div>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '150px'}}>
+      <h1 style={{}}>Tap List</h1>
+      <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+        {masterKegList.map((keg, index) =>
+          <Keg name={keg.name}
+            brewery={keg.brewery}
+            price={keg.price}
+            abv={keg.abv}
+            ibu={keg.ibu}
+            key={index}/>
+        )}
+      </div>
+  </div>
   );
 }
 

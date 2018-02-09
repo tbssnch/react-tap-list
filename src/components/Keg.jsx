@@ -1,16 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function Keg(props){
   return (
     <div>
-      <ul>
-        <li>{props.name}</li>
-        <li>{props.brewery}</li>
-        <li>{props.price}</li>
-        <li>{props.abv}</li>
-        <li>{props.ibu}</li>
-      </ul>
+      <style jsx>
+        {`
+          .keg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            background: #ffffff;
+
+          },
+          ul {
+            list-style: none;
+            padding: 0;
+          },
+          li {
+            font-family: 'Roboto', sans-serif;
+          }
+
+
+          `}
+
+      </style>
+      <div className="keg">
+        <ul>
+          <li>{props.name}</li>
+          <li>{props.brewery}</li>
+          <li>{props.price}</li>
+          <li>{props.abv}</li>
+          <li>{props.ibu}</li>
+          <Link to="/editkeg">Edit</Link>
+        </ul>
+      </div>
     </div>
   );
 }

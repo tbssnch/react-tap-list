@@ -9,10 +9,26 @@ import { Switch, Route } from 'react-router-dom';
 function App(){
   return (
     <div>
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={KegList} />
-      </Switch>
+      <style global jsx>
+        {`
+          body {
+            background: #ECEBE4;
+
+          },
+
+
+          `}
+
+      </style>
+      <div>
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={KegList} />
+          <Route path='/AddKeg' component={AddKeg} />
+          <Route path='/EditKeg' component={EditKeg} />
+          <Route path='' component={Error404} />
+        </Switch>
+      </div>
     </div>
   );
 }

@@ -5,6 +5,7 @@ function Header() {
   return (
     <div>
       <Link to="/addkeg">Add Keg</Link>
+      <Link to="/">Home</Link>
     </div>
   );
 }
