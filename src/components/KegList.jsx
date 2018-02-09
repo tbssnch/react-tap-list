@@ -15,7 +15,14 @@ var masterKegList = [
 function KegList(){
   return (
     <div>
-      <p>KegList works!</p>
+      {masterKegList.map((keg, index) =>
+        <Keg name={keg.name}
+          brewery={keg.brewery}
+          price={keg.price}
+          abv={keg.abv}
+          ibu={keg.ibu}
+          key={index}/>
+      )}
     </div>
   );
 }

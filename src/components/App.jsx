@@ -8,7 +8,6 @@ import { Switch, Route } from 'react-router-dom';
 function App(){
   return (
     <div>
-      <p>App Works!</p>
       <KegList/>
       <AddKeg/>
       <EditKeg/>
