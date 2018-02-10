@@ -35,9 +35,9 @@ var masterKegList = [
 
 function KegList(){
   return (
-  <div className="keg-list">
-    <style jsx>
-      {`
+    <div className="keg-list">
+      <style jsx>
+        {`
         .keg-list {
           display: flex;
           justify-content: center;
@@ -56,7 +56,7 @@ function KegList(){
         }
 
       `}
-    </style>
+      </style>
 
       <h1>Tap List</h1>
       <div className="keg-display">
@@ -71,7 +71,7 @@ function KegList(){
       </div>
 
 
-  </div>
+    </div>
   );
 }
 

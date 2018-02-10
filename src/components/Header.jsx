@@ -30,14 +30,14 @@ function Header() {
         `}
       </style>
 
-        <img className="beer-logo" src="http://icons.iconarchive.com/icons/flat-icons.com/flat/512/Beer-icon.png"></img>
-        <div className="nav-links">
-          <ul>
-            <li><Link className="links" to="/">Home </Link></li>
-            <li><Link className="links" to="/addkeg">Add Keg</Link></li>
+      <img className="beer-logo" src="http://icons.iconarchive.com/icons/flat-icons.com/flat/512/Beer-icon.png"></img>
+      <div className="nav-links">
+        <ul>
+          <li><Link className="links" to="/">Home </Link></li>
+          <li><Link className="links" to="/addkeg">Add Keg</Link></li>
 
-          </ul>
-        </div>
+        </ul>
+      </div>
     </div>
   );
 }
