@@ -13,9 +13,13 @@ function App(){
       <style global jsx>
         {`
           body {
-            background: #ECEBE4;
+            background: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
 
-          },
+          }
+          a {
+            text-decoration: none;
+          }
 
 
           `}

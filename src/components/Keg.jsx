@@ -14,12 +14,13 @@ function Keg(props){
             width: 200px;
             height: 200px;
             margin: 10px;
-            background: #ffffff;
+            border: 4px solid #334d5b;
 
           },
           ul {
             list-style: none;
             padding: 0;
+
           },
           li {
             font-family: 'Roboto', sans-serif;

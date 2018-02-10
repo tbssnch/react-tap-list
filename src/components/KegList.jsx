@@ -35,9 +35,31 @@ var masterKegList = [
 
 function KegList(){
   return (
-    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', marginTop: '150px'}}>
-      <h1 style={{}}>Tap List</h1>
-      <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+  <div className="keg-list">
+    <style jsx>
+      {`
+        .keg-list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 150px;
+        }
+        h1 {
+          color: #334d5b;
+          font-family: 'Righteous', cursive;
+        }
+        .keg-display {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+      `}
+    </style>
+
+      <h1>Tap List</h1>
+      <div className="keg-display">
         {masterKegList.map((keg, index) =>
           <Keg name={keg.name}
             brewery={keg.brewery}
@@ -47,7 +69,9 @@ function KegList(){
             key={index}/>
         )}
       </div>
-    </div>
+
+
+  </div>
   );
 }
 
