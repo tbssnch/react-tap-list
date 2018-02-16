@@ -10,7 +10,11 @@ function AddKeg() {
 
   function handleAddKeg(event){
     event.preventDefault();
-    console.log(_name.value);
+    _name.value = '';
+    _brewery.value = '';
+    _price.value = '';
+    _abv.value = '';
+    _ibu.value = '';
   }
 
   return (
