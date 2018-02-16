@@ -11,16 +11,24 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: []
+      masterKegList: {},
+      selectedKeg: null
     };
     this.handleAddKeg = this.handleAddKeg.bind(this);
+    this.handleDeleteKeg = this.handleDeleteKeg.bind(this);
   }
 
   handleAddKeg(newKeg){
-    const newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.push(newKeg);
+    const newMasterKegList = Object.assign({}, this.state.masterKegList, {
+      [newKeg.id]: newKeg
+    });
     this.setState({masterKegList: newMasterKegList});
   }
+
+  handleDeleteKeg(keg){
+    this.setState({selectedKeg: keg});
+  }
+
 
   render(){
     return (

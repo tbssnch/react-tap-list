@@ -30,14 +30,16 @@ function KegList(props){
 
       <h1>Tap List</h1>
       <div className="keg-display">
-        {props.kegList.map((keg) =>
-          <Keg name={keg.name}
+        {Object.keys(props.kegList).map(function(kegId) {
+          const keg = props.kegList[kegId];
+          return <Keg name={keg.name}
             brewery={keg.brewery}
             price={keg.price}
             abv={keg.abv}
             ibu={keg.ibu}
-            key={keg.id} />
-        )}
+            key={keg.id}
+            onDeleteKeg={props.onDeleteKeg} />;
+        })}
       </div>
 
 
@@ -46,7 +48,8 @@ function KegList(props){
 }
 
 KegList.propTypes = {
-  kegList: PropTypes.array
+  kegList: PropTypes.object,
+  onDeleteKeg: PropTypes.func
 };
 
 export default KegList;
