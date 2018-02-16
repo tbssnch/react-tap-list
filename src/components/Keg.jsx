@@ -32,11 +32,11 @@ function Keg(props){
       </style>
       <div className="keg">
         <ul>
-          <li>{props.name}</li>
-          <li>{props.brewery}</li>
-          <li>{props.price}</li>
-          <li>{props.abv}</li>
-          <li>{props.ibu}</li>
+          <li>Name: {props.name}</li>
+          <li>Brewery: {props.brewery}</li>
+          <li>Price: {props.price}</li>
+          <li>ABV: {props.abv}</li>
+          <li>IBU: {props.ibu}</li>
           <Link to="/editkeg">Edit</Link>
         </ul>
       </div>

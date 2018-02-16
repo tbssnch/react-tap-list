@@ -3,6 +3,7 @@ import Keg from './Keg';
 import PropTypes from 'prop-types';
 
 function KegList(props){
+  console.log(props.kegList);
   return (
     <div className="keg-list">
       <style jsx>
@@ -29,13 +30,13 @@ function KegList(props){
 
       <h1>Tap List</h1>
       <div className="keg-display">
-        {props.kegList.map((keg, index) =>
+        {props.kegList.map((keg) =>
           <Keg name={keg.name}
             brewery={keg.brewery}
             price={keg.price}
             abv={keg.abv}
             ibu={keg.ibu}
-            key={index} />
+            key={keg.id} />
         )}
       </div>
 
