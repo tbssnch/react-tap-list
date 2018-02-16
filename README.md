@@ -4,7 +4,7 @@
 
 ## Description
 
-This is an application that allows Tap Rooms to view their current inventory of beers on tap, edit their beers on tap, and add new beers to the tap list.
+This is an application that allows Tap Rooms to view their current inventory of beer, add, and delete beers in the tap list.
 
 
 ## Setup/Installation
