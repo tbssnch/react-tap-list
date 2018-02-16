@@ -4,6 +4,7 @@ import KegList from './KegList';
 import AddKeg from './AddKeg';
 import EditKeg from './EditKeg';
 import Error404 from './Error404';
+import { v4 } from 'uuid';
 import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
@@ -12,21 +13,23 @@ class App extends React.Component {
     super(props);
     this.state = {
       masterKegList: {},
-      selectedKeg: null
     };
     this.handleAddKeg = this.handleAddKeg.bind(this);
     this.handleDeleteKeg = this.handleDeleteKeg.bind(this);
   }
 
   handleAddKeg(newKeg){
-    const newMasterKegList = Object.assign({}, this.state.masterKegList, {
-      [newKeg.id]: newKeg
+    let newKegId = v4();
+    let newMasterKegList = Object.assign({}, this.state.masterKegList, {
+      [newKegId]: newKeg
     });
     this.setState({masterKegList: newMasterKegList});
   }
 
-  handleDeleteKeg(keg){
-    this.setState({selectedKeg: keg});
+  handleDeleteKeg(kegId){
+    let newMasterKegList = this.state.masterKegList;
+    delete newMasterKegList[kegId];
+    this.setState({masterKegList: newMasterKegList});
   }
 
 
@@ -51,7 +54,8 @@ class App extends React.Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
+            <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList}
+              onDeleteKeg={this.handleDeleteKeg} />} />
             <Route path='/AddKeg' render={()=><AddKeg onNewKeg={this.handleAddKeg} />} />
             <Route path='/EditKeg' component={EditKeg} />
             <Route path='' component={Error404} />

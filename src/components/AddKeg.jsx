@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
 
 function AddKeg(props) {
   let _name = null;
@@ -12,7 +11,7 @@ function AddKeg(props) {
 
   function handleAddKeg(event){
     event.preventDefault();
-    props.onNewKeg({name: _name.value, brewery: _brewery.value, price: _price.value, abv: _abv.value, ibu: _ibu.value, id: v4()});
+    props.onNewKeg({name: _name.value, brewery: _brewery.value, price: _price.value, abv: _abv.value, ibu: _ibu.value});
     _name.value = '';
     _brewery.value = '';
     _price.value = '';

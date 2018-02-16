@@ -37,7 +37,8 @@ function KegList(props){
             price={keg.price}
             abv={keg.abv}
             ibu={keg.ibu}
-            key={keg.id}
+            key={kegId}
+            kegId={kegId}
             onDeleteKeg={props.onDeleteKeg} />;
         })}
       </div>

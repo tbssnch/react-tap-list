@@ -38,6 +38,7 @@ function Keg(props){
           <li>ABV: {props.abv}</li>
           <li>IBU: {props.ibu}</li>
           <Link to="/editkeg">Edit</Link>
+          <button onClick={() => {props.onDeleteKeg(props.kegId);}}>Remove Keg</button>
         </ul>
       </div>
     </div>
@@ -49,7 +50,9 @@ Keg.propTypes = {
   brewery: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
-  ibu: PropTypes.string.isRequired
+  ibu: PropTypes.string.isRequired,
+  kegId: PropTypes.string.isRequired,
+  onDeleteKeg: PropTypes.func
 };
 
 export default Keg;
