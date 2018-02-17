@@ -30,7 +30,7 @@ function Header() {
         `}
       </style>
 
-      <img className="beer-logo" src="http://icons.iconarchive.com/icons/flat-icons.com/flat/512/Beer-icon.png"></img>
+      <img className="beer-logo" src="https://image.flaticon.com/icons/svg/23/23417.svg"></img>
       <div className="nav-links">
         <ul>
           <li><Link className="links" to="/">Home </Link></li>

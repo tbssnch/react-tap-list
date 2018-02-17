@@ -14,7 +14,7 @@ function Keg(props){
             width: 200px;
             height: 200px;
             margin: 10px;
-            border: 4px solid #334d5b;
+            border: 4px solid #000;
 
           },
           ul {
@@ -23,8 +23,15 @@ function Keg(props){
 
           },
           li {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open Sans Condensed', sans-serif;
           }
+          button {
+            border: 1px solid #000;
+            background: none;
+            width: 80px;
+            height: 30px;
+            margin-bottom: 5px;
+}
 
 
           `}
@@ -37,7 +44,7 @@ function Keg(props){
           <li>Price: {props.price}</li>
           <li>ABV: {props.abv}</li>
           <li>IBU: {props.ibu}</li>
-          <Link to="/editkeg">Edit</Link>
+          <li><button><Link to="/editkeg">Edit Keg</Link></button></li>
           <button onClick={() => {props.onDeleteKeg(props.kegId);}}>Remove Keg</button>
         </ul>
       </div>

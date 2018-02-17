@@ -13,11 +13,11 @@ function KegList(props){
           justify-content: center;
           align-items: center;
           flex-direction: column;
-          margin-top: 150px;
+          margin-top: 50px;
         }
         h1 {
-          color: #334d5b;
-          font-family: 'Righteous', cursive;
+          color: #000;
+          font-family: 'Open Sans Condensed', sans-serif;
         }
         .keg-display {
           display: flex;
