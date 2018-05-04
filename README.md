@@ -45,7 +45,6 @@ I thought that I had my component structure all figured out, but the further I g
 
 ![ProjectTree](ProjectTree.svg)
 
-As far as how this felt compared to Angular.. I miss Angular. Everything just feels pretty messy to me with this, especially with the styling. I'm sure as things progress and I start to get a better handle on things that will change.
 
 ## License
 
