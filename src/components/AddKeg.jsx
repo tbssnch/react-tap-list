@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+
 
 function AddKeg(props) {
   let _name = null;
@@ -12,6 +14,8 @@ function AddKeg(props) {
   function handleAddKeg(event){
     event.preventDefault();
     props.onNewKeg({name: _name.value, brewery: _brewery.value, price: _price.value, abv: _abv.value, ibu: _ibu.value});
+    props.history.push('/');
+    console.log(props);
     _name.value = '';
     _brewery.value = '';
     _price.value = '';
@@ -71,7 +75,6 @@ function AddKeg(props) {
             placeholder='IBU'
             ref={(input) => {_ibu = input;}} />
           <button type="submit">Submit</button>
-
         </form>
       </div>
     </div>
@@ -79,7 +82,8 @@ function AddKeg(props) {
 }
 
 AddKeg.propTypes = {
-  onNewKeg: PropTypes.func
+  onNewKeg: PropTypes.func,
+  history: PropTypes.object
 };
 
-export default AddKeg;
+export default withRouter(AddKeg);
