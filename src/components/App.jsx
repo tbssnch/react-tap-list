@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: {},
+      masterKegList: null,
     };
     this.handleAddKeg = this.handleAddKeg.bind(this);
     this.handleDeleteKeg = this.handleDeleteKeg.bind(this);
