@@ -1,20 +1,25 @@
 import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
-import TAlogo from '../assets/ta_logo.png';
-import Rlogo from '../assets/riveters-logo.gif';
 
-import { Link } from 'react-router-dom';
-
+import { withRouter } from 'react-router-dom';
 
 
 function KegList(props){
+
+  function AddKegRoute(event){
+    event.preventDefault();
+    props.history.push('/AddKeg');
+  }
+
   return (
     <div className="keg-list">
       <style jsx>
         {`
-        .add-link {
+        a {
           text-decoration: none;
+          font-family: 'Open Sans Condensed', sans-serif;
+          color: black;
         }
         .keg-list {
           display: flex;
@@ -63,7 +68,7 @@ function KegList(props){
           :
           <div>
             <div className="add-keg">
-              <Link className="add-link" to="/addkeg">Add Keg</Link>
+              <button type="submit" onClick={AddKegRoute}>Add</button>
             </div>
             <div className="keg-display">
               {Object.keys(props.kegList).map(function(kegId) {
@@ -90,7 +95,8 @@ function KegList(props){
 
 KegList.propTypes = {
   kegList: PropTypes.object,
-  onDeleteKeg: PropTypes.func
+  onDeleteKeg: PropTypes.func,
+  history: PropTypes.object
 };
 
-export default KegList;
+export default withRouter(KegList);

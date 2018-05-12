@@ -59,8 +59,6 @@ function Header() {
       <div className="nav-links">
         <ul>
           <li><Link className="links" to="/">Home </Link></li>
-          <li><Link className="links" to="/addkeg">Add Keg</Link></li>
-
         </ul>
       </div>
       <div className="logo-container">
