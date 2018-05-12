@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 function Keg(props){
   return (
@@ -11,19 +10,19 @@ function Keg(props){
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 200px;
-            height: 200px;
+            width: 1200px;
+            height: 100px;
             margin: 10px;
             border: 4px solid #000;
 
           },
           ul {
             list-style: none;
-            padding: 0;
-
-          },
+          }
           li {
             font-family: 'Open Sans Condensed', sans-serif;
+            margin-left: 20px;
+            margin-right: 20px;
           }
           button {
             border: 1px solid #000;
@@ -38,15 +37,13 @@ function Keg(props){
 
       </style>
       <div className="keg">
-        <ul>
-          <li>Name: {props.name}</li>
-          <li>Brewery: {props.brewery}</li>
-          <li>Price: {props.price}</li>
-          <li>ABV: {props.abv}</li>
-          <li>IBU: {props.ibu}</li>
-          <li><button><Link to="/editkeg">Edit Keg</Link></button></li>
-          <button onClick={() => {props.onDeleteKeg(props.kegId);}}>Remove Keg</button>
-        </ul>
+        <li>Name: {props.name}</li>
+        <li>Brewery: {props.brewery}</li>
+        <li>Price: {props.price}</li>
+        <li>ABV: {props.abv}</li>
+        <li>IBU: {props.ibu}</li>
+        <button onClick={() => {props.onDeleteKeg(props.kegId);}}>Remove Keg</button>
+
       </div>
     </div>
   );

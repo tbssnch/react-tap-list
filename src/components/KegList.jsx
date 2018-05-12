@@ -4,12 +4,18 @@ import PropTypes from 'prop-types';
 import TAlogo from '../assets/ta_logo.png';
 import Rlogo from '../assets/riveters-logo.gif';
 
+import { Link } from 'react-router-dom';
+
+
 
 function KegList(props){
   return (
     <div className="keg-list">
       <style jsx>
         {`
+        .add-link {
+          text-decoration: none;
+        }
         .keg-list {
           display: flex;
           justify-content: center;
@@ -55,18 +61,23 @@ function KegList(props){
             <p>Welcome!</p>
           </div>
           :
-          <div className="keg-display">
-            {Object.keys(props.kegList).map(function(kegId) {
-              const keg = props.kegList[kegId];
-              return <Keg name={keg.name}
-                brewery={keg.brewery}
-                price={keg.price}
-                abv={keg.abv}
-                ibu={keg.ibu}
-                key={kegId}
-                kegId={kegId}
-                onDeleteKeg={props.onDeleteKeg} />;
-            })}
+          <div>
+            <div className="add-keg">
+              <Link className="add-link" to="/addkeg">Add Keg</Link>
+            </div>
+            <div className="keg-display">
+              {Object.keys(props.kegList).map(function(kegId) {
+                const keg = props.kegList[kegId];
+                return <Keg name={keg.name}
+                  brewery={keg.brewery}
+                  price={keg.price}
+                  abv={keg.abv}
+                  ibu={keg.ibu}
+                  key={kegId}
+                  kegId={kegId}
+                  onDeleteKeg={props.onDeleteKeg} />;
+              })}
+            </div>
           </div>
       }
 
