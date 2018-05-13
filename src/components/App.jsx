@@ -6,6 +6,8 @@ import EditKeg from './EditKeg';
 import Error404 from './Error404';
 import { v4 } from 'uuid';
 import { Switch, Route } from 'react-router-dom';
+import background from '../assets/tap_background.jpg';
+
 
 class App extends React.Component {
 
@@ -39,9 +41,9 @@ class App extends React.Component {
         <style global jsx>
           {`
           body {
-            background: #f5f5f5;
+            background-image: url(${background});
             font-family: 'Roboto', sans-serif;
-
+            background-size: 1500px;
           }
           a {
             text-decoration: none;
@@ -51,7 +53,6 @@ class App extends React.Component {
           `}
 
         </style>
-        <div>
           <Header />
           <Switch>
             <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList}
@@ -61,7 +62,6 @@ class App extends React.Component {
             <Route path='' component={Error404} />
           </Switch>
         </div>
-      </div>
     );
   }
 }

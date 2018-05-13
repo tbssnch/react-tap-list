@@ -16,10 +16,29 @@ function KegList(props){
     <div className="keg-list">
       <style jsx>
         {`
-        a {
-          text-decoration: none;
-          font-family: 'Open Sans Condensed', sans-serif;
-          color: black;
+        .intro {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          height: 300px;
+          width: 900px;
+        }
+        p {
+          margin-left: 20px;
+          margin-right: 20px;
+          font-family: 'Playfair Display', serif;
+          font-size: 20px;
+        }
+        .add-btn {
+          border: 4px solid black;
+          height: 40px;
+          width: 40px;
+          background: none;
+          border-radius: 20px;
+          font-family: 'Roboto', sans-serif;
+          font-size: 20px;
         }
         .keg-list {
           display: flex;
@@ -33,19 +52,6 @@ function KegList(props){
           justify-content: space-between;
           align-items: center;
           width: 1000px;
-        }
-        .logo {
-          display: flex;
-          justify-content: center;
-          width: 400px;
-          height: 80px;
-          background-color: #000;
-        }
-        .ta-logo {
-          width: 100px;
-        }
-        .r-logo {
-          width: 100px;
         }
         h1 {
           color: #ffff;
@@ -63,18 +69,22 @@ function KegList(props){
       {
         (props.kegList === null)?
           <div className="intro">
-            <p>Welcome!</p>
+            <p>Welcome! Here is where you will keep track of your keg inventory. Each keg will be displayed here. If a keg runs out, you can hit the 'X' on the right to remove it.</p>
+            <p>Add your first keg to get started!</p>
+            <button className="add-btn" type="submit" onClick={AddKegRoute}>+</button>
+
           </div>
           :
           <div>
             <div className="add-keg">
-              <button type="submit" onClick={AddKegRoute}>Add</button>
+              <button className="add-btn" type="submit" onClick={AddKegRoute}>+</button>
             </div>
             <div className="keg-display">
               {Object.keys(props.kegList).map(function(kegId) {
                 const keg = props.kegList[kegId];
-                return <Keg name={keg.name}
+                return <Keg
                   brewery={keg.brewery}
+                  name={keg.name}
                   price={keg.price}
                   abv={keg.abv}
                   ibu={keg.ibu}

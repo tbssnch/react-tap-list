@@ -10,25 +10,28 @@ function Keg(props){
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 1200px;
-            height: 100px;
+            width: 600px;
+            height: 75px;
             margin: 10px;
-            border: 4px solid #000;
+            border-radius: 10px;
+            border: 4px solid black;
+            background: none;
 
           },
           ul {
             list-style: none;
           }
           li {
-            font-family: 'Open Sans Condensed', sans-serif;
-            margin-left: 20px;
-            margin-right: 20px;
+            font-family: 'Playfair Display', serif;
+            margin-left: 10px;
+            margin-right: 10px;
           }
           button {
-            border: 1px solid #000;
+            border: 4px solid #000;
+            border-radius: 20px;
             background: none;
-            width: 80px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             margin-bottom: 5px;
 }
 
@@ -37,12 +40,12 @@ function Keg(props){
 
       </style>
       <div className="keg">
-        <li>Name: {props.name}</li>
-        <li>Brewery: {props.brewery}</li>
-        <li>Price: {props.price}</li>
-        <li>ABV: {props.abv}</li>
+        <li>{props.brewery}</li>
+        <li>{props.name}</li>
+        <li>${props.price}</li>
+        <li>ABV: {props.abv}%</li>
         <li>IBU: {props.ibu}</li>
-        <button onClick={() => {props.onDeleteKeg(props.kegId);}}>Remove Keg</button>
+        <button onClick={() => {props.onDeleteKeg(props.kegId);}}>X</button>
 
       </div>
     </div>

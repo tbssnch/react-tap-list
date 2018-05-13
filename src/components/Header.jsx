@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Rlogo from '../assets/riveters-logo.gif';
-import TAlogo from '../assets/ta_logo.png';
+import logo from '../assets/tap_room_logo.png';
 
 function Header() {
   return (
     <div className="header">
       <style jsx>
         {`
-          .header {
+          .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,17 +35,7 @@ function Header() {
             width: 1000px;
           }
           .logo {
-            display: flex;
-            justify-content: center;
-            width: 400px;
-            height: 80px;
-            background-color: #000;
-          }
-          .ta-logo {
-            width: 100px;
-          }
-          .r-logo {
-            width: 100px;
+            width: 150px;
           }
           h1 {
             color: #ffff;
@@ -56,19 +45,11 @@ function Header() {
         `}
       </style>
 
-      <div className="nav-links">
+      <div className="header-container">
+        <img className="logo" src={logo}></img>
         <ul>
           <li><Link className="links" to="/">Home </Link></li>
         </ul>
-      </div>
-      <div className="logo-container">
-        <img className="r-logo" src={Rlogo}></img>
-        <img className="ta-logo" src={TAlogo}></img>
-        <div className="logo">
-          <h1>D O U B L E P O S T</h1>
-        </div>
-        <img className="ta-logo" src={TAlogo}></img>
-        <img className="r-logo" src={Rlogo}></img>
 
       </div>
     </div>

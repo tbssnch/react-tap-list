@@ -4,8 +4,8 @@ import { withRouter } from 'react-router-dom';
 
 
 function AddKeg(props) {
-  let _name = null;
   let _brewery = null;
+  let _name = null;
   let _price = null;
   let _abv = null;
   let _ibu = null;
@@ -13,9 +13,8 @@ function AddKeg(props) {
 
   function handleAddKeg(event){
     event.preventDefault();
-    props.onNewKeg({name: _name.value, brewery: _brewery.value, price: _price.value, abv: _abv.value, ibu: _ibu.value});
+    props.onNewKeg({brewery: _brewery.value, name: _name.value, price: _price.value, abv: _abv.value, ibu: _ibu.value});
     props.history.push('/');
-    console.log(props);
     _name.value = '';
     _brewery.value = '';
     _price.value = '';
@@ -44,18 +43,18 @@ function AddKeg(props) {
       </style>
       <div className="add">
         <form onSubmit={handleAddKeg} className="addForm">
-          <label>Name: </label>
-          <input
-            type='text'
-            id='name'
-            placeholder='Name'
-            ref={(input) => {_name = input;}} />
           <label>Brewery: </label>
           <input
             type='text'
             id='brewery'
             placeholder='Brewery'
             ref={(input) => {_brewery = input;}} />
+          <label>Name: </label>
+          <input
+            type='text'
+            id='name'
+            placeholder='Name'
+            ref={(input) => {_name = input;}} />
           <label>Price: </label>
           <input
             type='text'
