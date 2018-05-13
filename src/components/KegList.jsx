@@ -40,6 +40,14 @@ function KegList(props){
           font-family: 'Roboto', sans-serif;
           font-size: 20px;
         }
+        .keg-list-container {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+        .add-keg {
+          margin-bottom: 40px;
+        }
         .keg-list {
           display: flex;
           justify-content: center;
@@ -52,10 +60,6 @@ function KegList(props){
           justify-content: space-between;
           align-items: center;
           width: 1000px;
-        }
-        h1 {
-          color: #ffff;
-          font-family: 'Open Sans Condensed', sans-serif;
         }
         .keg-display {
           display: flex;
@@ -75,7 +79,7 @@ function KegList(props){
 
           </div>
           :
-          <div>
+          <div className="keg-list-container">
             <div className="add-keg">
               <button className="add-btn" type="submit" onClick={AddKegRoute}>+</button>
             </div>

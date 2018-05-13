@@ -8,7 +8,7 @@ function Keg(props){
         {`
           .keg {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             width: 600px;
             height: 75px;
@@ -17,14 +17,23 @@ function Keg(props){
             border: 4px solid black;
             background: none;
 
-          },
+          }
+          .beer-name {
+            margin-left: 10px;
+            font-family: 'Playfair Display', serif;
+          }
+          .beer-info {
+            display: flex;
+          }
+          .delete-btn {
+            margin-right: 10px;
+          }
           ul {
             list-style: none;
           }
           li {
             font-family: 'Playfair Display', serif;
-            margin-left: 10px;
-            margin-right: 10px;
+            list-style: none;
           }
           button {
             border: 4px solid #000;
@@ -40,12 +49,17 @@ function Keg(props){
 
       </style>
       <div className="keg">
-        <li>{props.brewery}</li>
-        <li>{props.name}</li>
-        <li>${props.price}</li>
-        <li>ABV: {props.abv}%</li>
-        <li>IBU: {props.ibu}</li>
-        <button onClick={() => {props.onDeleteKeg(props.kegId);}}>X</button>
+        <div className="beer-name">
+          <h3>{props.brewery} {props.name}</h3>
+        </div>
+        <div className="beer-info">
+          <li>Price: ${props.price}</li>
+          <li>ABV: {props.abv}%</li>
+          <li>IBU: {props.ibu}</li>
+        </div>
+        <div className="delete-btn">
+          <button onClick={() => {props.onDeleteKeg(props.kegId);}}>X</button>
+        </div>
 
       </div>
     </div>
