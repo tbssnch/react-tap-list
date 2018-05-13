@@ -35,9 +35,26 @@ function AddKeg(props) {
             flex-direction: column;
             width: 400px;
           }
-          button {
-            width: 100px;
-            margin-top: 20px;
+          label {
+            margin-top: 10px;
+            font-family: 'Playfair Display', serif;
+          }
+          input {
+            height: 20px;
+            border: 4px solid black;
+            background: none;
+            margin-top: 2px;
+            font-family: 'Playfair Display', serif;
+          }
+          .add-btn {
+            border: 4px solid black;
+            height: 40px;
+            width: 40px;
+            background: none;
+            border-radius: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            margin: 20px auto;
           }
         `}
       </style>
@@ -73,7 +90,7 @@ function AddKeg(props) {
             id='ibu'
             placeholder='IBU'
             ref={(input) => {_ibu = input;}} />
-          <button type="submit">Submit</button>
+          <button className="add-btn" type="submit">+</button>
         </form>
       </div>
     </div>
