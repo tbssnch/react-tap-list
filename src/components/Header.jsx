@@ -11,6 +11,7 @@ function Header() {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 150px;
             width: 100%;
           }
           ul {
@@ -35,7 +36,8 @@ function Header() {
             width: 1000px;
           }
           .logo {
-            width: 150px;
+            width: 100px;
+            margin-left: 40px;
           }
           h1 {
             color: #ffff;

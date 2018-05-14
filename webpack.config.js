@@ -15,7 +15,7 @@ module.exports = {
   output: {
     filename: 'app.bundle.js',
     path: resolve(__dirname, 'build'),
-    publicPath: '/'
+    publicPath: 'https://tbssnch.github.io/react-tap-list/'
   },
 
   resolve: {

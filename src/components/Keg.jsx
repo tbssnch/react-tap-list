@@ -14,8 +14,7 @@ function Keg(props){
             height: 75px;
             margin: 10px;
             border-radius: 10px;
-            border: 4px solid black;
-            background: none;
+            background: rgba(255, 255, 255, 0.5);
 
           }
           .beer-name {
