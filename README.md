@@ -9,6 +9,10 @@ This is an application that allows Tap Rooms to view their current inventory of 
 
 ## Setup/Installation
 
+Visit https://tbssnch.github.io/react-tap-list/
+
+or
+
 Open the terminal on your computer.
 
 Type "cd desktop" and hit enter.

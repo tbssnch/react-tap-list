@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/tbssnch/react-tap-list.git"
   },
-  "homepage": "https://tbssnch.github.io/react-tap-list/",
+  "homepage": "https://github.com/tbssnch/react-tap-list.git",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "prop-types": "^15.5.10",
